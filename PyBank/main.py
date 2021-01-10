@@ -40,15 +40,38 @@ with open(file_to_load) as election_data:
 
         net_total.append(int(row[1]))
 
-month_total = len(month_total)
 
-print(f"Total Months: {month_total}")
+    for i in range(1, len(net_total)):
+        changes.append(net_total[i] - net_total[i-1])
 
-net_total = net_total + int(row[1])
+        ave_change = sum(changes)/len(changes)
 
-print(f"Total: {net_total}")
+        max_value = max(changes)
+
+        max_value_index = changes.index(max_value) + 1
+
+        min_value = min(changes)
+
+        min_value_index = changes.index(min_value) + 1
+
+print(f"Total Months: {len(month_total)}")
 
 
+print(f"Total: {sum(net_total)}")
+
+print(f"Average Change: $ {round(ave_change, 2)}")
+
+print(f"Greatest Increase in Profits: {month_total[max_value_index]} ${max_value}")
+
+print(f"Greatest Decrease in Profits: {month_total[min_value_index]} ${min_value}")
+
+
+
+
+
+# define variable for average change
+
+# find greatest month over month increase in profits 
 
 
 

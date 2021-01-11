@@ -37,25 +37,19 @@ with open(file_to_load) as election_data:
             candidates_list.append(candidate)   
             can_votes.append(1)
     
-    khan_index = can_votes[0]
-    correy_index = can_votes[1]
-    li_index = can_votes[2]
-    tooley_index = can_votes[3]
 
-    
-
-    khan_perc = khan_index/len(number_of_votes)*100
-    correy_perc = correy_index/len(number_of_votes)*100
-    li_perc = li_index/len(number_of_votes)*100
-    tooley_perc = tooley_index/len(number_of_votes)*100
+    khan_perc = can_votes[0]/len(number_of_votes)*100
+    correy_perc = can_votes[1]/len(number_of_votes)*100
+    li_perc = can_votes[2]/len(number_of_votes)*100
+    tooley_perc = can_votes[3]/len(number_of_votes)*100
 
  
 
 print(f"Total Votes: {len(number_of_votes)}")
 
-print(f"{candidates_list[0]}: {round(khan_perc, 5)}% {khan_index}")
+print(f"{candidates_list[0]}: {round(khan_perc, 4)}% {can_votes[0]}")
 
-
+print(f"{candidates_list[1]}: {round(correy_perc, 4)}% {can_votes[1]}")
 
 
 

@@ -10,7 +10,6 @@ import os
 
 # Files to load and output (Remember to change these)
 file_to_load = os.path.join("Resources", "budget_data.csv")
-file_to_output = os.path.join("analysis", "financial_analysis.txt")
 
 
 # Analyze the records to calculate the following
@@ -54,10 +53,14 @@ with open(file_to_load) as election_data:
 
         min_value_index = changes.index(min_value) + 1
 
+print("Finacial Analysis")
+
+print("-----------------------")
+
 print(f"Total Months: {len(month_total)}")
 
 
-print(f"Total: {sum(net_total)}")
+print(f"Total: ${sum(net_total)}")
 
 print(f"Average Change: $ {round(ave_change, 2)}")
 
@@ -65,7 +68,7 @@ print(f"Greatest Increase in Profits: {month_total[max_value_index]} ${max_value
 
 print(f"Greatest Decrease in Profits: {month_total[min_value_index]} ${min_value}")
 
-
+file_to_output = os.path.join("analysis", "financial_analysis.txt")
 
 
 

@@ -13,9 +13,10 @@ file_to_output = os.path.join("analysis", "budget_analysis.txt")
 ## git commit -m "message about changes"
 ## git push
 
-total_votes=[]
+number_of_votes=[]
 candidates_list=[]
 can_votes =[]
+percentages = []
 
 # Read the csv and convert it into a list of dictionaries
 with open(file_to_load) as election_data:
@@ -24,7 +25,9 @@ with open(file_to_load) as election_data:
 
 
     for row in reader:
-        total_votes.append(row[0])
+        number_of_votes.append(row[0])
+
+        
 
         candidate = row[2]
         if candidate in candidates_list:
@@ -34,12 +37,25 @@ with open(file_to_load) as election_data:
             candidates_list.append(candidate)   
             can_votes.append(1)
     
+    khan_index = can_votes[0]
+    correy_index = can_votes[1]
+    li_index = can_votes[2]
+    tooley_index = can_votes[3]
+
+    
+
+    khan_perc = khan_index/len(number_of_votes)*100
+    
+ 
 
 
 
-print(f"Total Votes: {len(total_votes)}")
+print(f"Total Votes: {len(number_of_votes)}")
 
-print(f"{candidates_list}")
+print(f"{khan_perc}")
+
+
+
 
 
 

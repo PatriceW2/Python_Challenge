@@ -28,9 +28,20 @@ with open(file_to_load) as election_data:
 
         candidate = row[2]
         if candidate in candidates_list:
+            candidate_index = candidates_list.index (candidate)
+            can_votes[candidate_index] = can_votes[candidate_index] + 1
+        else:
+            candidates_list.append(candidate)   
+            can_votes.append(1)
+    
 
 
-    print(f"Total Votes: {len(total_votes)}")
+
+print(f"Total Votes: {len(total_votes)}")
+
+print(f"{candidates_list}")
+
+
 
 #list of candidates 
 

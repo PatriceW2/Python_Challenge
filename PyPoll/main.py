@@ -45,15 +45,15 @@ with open(file_to_load) as election_data:
     
 
     khan_perc = khan_index/len(number_of_votes)*100
-    
+    correy_perc = correy_index/len(number_of_votes)*100
+    li_perc = li_index/len(number_of_votes)*100
+    tooley_perc = tooley_index/len(number_of_votes)*100
+
  
-
-
 
 print(f"Total Votes: {len(number_of_votes)}")
 
-print(f"{khan_perc}")
-
+print(f"{candidates_list[0]}: {round(khan_perc, 5)}% {khan_index}")
 
 
 

@@ -68,7 +68,7 @@ print(f"Greatest Increase in Profits: {month_total[max_value_index]} ${max_value
 
 print(f"Greatest Decrease in Profits: {month_total[min_value_index]} ${min_value}")
 
-file_to_output = os.path.join("Resources", "analysis", "financial_analysis.txt")
+file_to_output = os.path.join("PyBank", "Resources", "analysis", "financial_analysis.txt")
 
 
 

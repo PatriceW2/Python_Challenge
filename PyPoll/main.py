@@ -28,7 +28,7 @@ with open(file_to_load) as election_data:
         number_of_votes.append(row[0])
 
         
-
+        #received help from tudor for the cadidate if statement
         candidate = row[2]
         if candidate in candidates_list:
             candidate_index = candidates_list.index (candidate)

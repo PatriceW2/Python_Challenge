@@ -39,6 +39,7 @@ with open(file_to_load) as election_data:
 
         net_total.append(int(row[1]))
 
+#received help from tudor for the i loop and subsequent code
 
     for i in range(1, len(net_total)):
         changes.append(net_total[i] - net_total[i-1])
@@ -52,6 +53,8 @@ with open(file_to_load) as election_data:
         min_value = min(changes)
 
         min_value_index = changes.index(min_value) + 1
+
+#tudor helped point out that functions can be preformed in f print statments 
 
 print("Finacial Analysis")
 

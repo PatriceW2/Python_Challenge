@@ -71,13 +71,28 @@ print(f"Greatest Increase in Profits: {month_total[max_value_index]} ${max_value
 
 print(f"Greatest Decrease in Profits: {month_total[min_value_index]} ${min_value}")
 
+
+with open("Resources", "analysis", "fincial_analysis.txt", "w") as text_file:
+
+    print("Finacial Analysis")
+
+    print("-----------------------")
+
+    print(f"Total Months: {len(month_total)}")
+
+
+    print(f"Total: ${sum(net_total)}")
+
+    print(f"Average Change: $ {round(ave_change, 2)}")
+
+    print(f"Greatest Increase in Profits: {month_total[max_value_index]} ${max_value}")
+
+    print(f"Greatest Decrease in Profits: {month_total[min_value_index]} ${min_value}")
+
 file_to_output = os.path.join("PyBank", "Resources", "analysis", "financial_analysis.txt")
 
 
 
-# define variable for average change
-
-# find greatest month over month increase in profits 
 
 
 

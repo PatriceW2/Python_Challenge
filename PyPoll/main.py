@@ -1,3 +1,11 @@
+#file_path = "C:\\Users\\Patrice\\Python_Homework\\PyPoll\\Resources\\election_data.csv"
+## To add new work and update our github repo:
+## git init
+## git add .
+## git commit -m "message about changes"
+## git push
+
+
 # Dependencies
 import csv
 import os
@@ -6,12 +14,7 @@ import os
 file_to_load = os.path.join("Resources", "election_data.csv")
 file_to_output = os.path.join("analysis", "budget_analysis.txt")
 
-#file_path = "C:\\Users\\Patrice\\Python_Homework\\PyPoll\\Resources\\election_data.csv"
-## To add new work and update our github repo:
-## git init
-## git add .
-## git commit -m "message about changes"
-## git push
+
 
 number_of_votes=[]
 candidates_list=[]
@@ -70,10 +73,24 @@ print("----------------------")
 
 print(f"Winner: {candidates_list[max_votes_index]}")
 
+with open("Resources", "analysis", "budget_analysis.txt", "w") as text_file:
 
-#list of candidates 
+    print("Election Results") 
 
+    print("---------------------")
 
-# calculate percentage of votes 
+    print(f"Total Votes: {len(number_of_votes)}")
 
-#
+    print("----------------------")
+
+    print(f"{candidates_list[0]}: {round(khan_perc, 4)}% {can_votes[0]}")
+
+    print(f"{candidates_list[1]}: {round(correy_perc, 4)}% {can_votes[1]}")
+
+    print(f"{candidates_list[2]}: {round(li_perc, 4)}% {can_votes[2]}")
+
+    print(f"{candidates_list[3]}: {round(tooley_perc, 4)}% {can_votes[3]}")
+
+    print("----------------------")
+
+    print(f"Winner: {candidates_list[max_votes_index]}")
